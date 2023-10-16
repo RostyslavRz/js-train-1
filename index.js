@@ -4,9 +4,9 @@
 function isEvenNumber(num) {
   // Перевірити, чи число num є парним
   if ((num %= 2) === 0) {
-    return `true`;
+    return true;
   } else {
-    return `false`;
+    return false;
   }
   // Повернути результат перевірки (true або false) як результат функції
 }
@@ -38,15 +38,15 @@ console.log("calculateSum(10)", calculateSum(10)); // Виведе: 55
 function isPrimeNumber(num) {
   if (num <= 1) {
     // Якщо число num менше або дорівнює 1, то воно не є простим, тому повертаємо false
-    return `false`;
+    return false;
   } // В іншому випадку продовжуємо перевірку
   else {
     for (let i = 2; i <= num - 1; i++) {
       // Запускаємо цикл для змінної i від 2 до num-1
       if ((num %= i) === 0) {
-        return `false`;
+        return false;
       } // Перевіряємо, чи num ділиться націло на поточне значення i
-      return `true`;
+      return true;
     }
   }
   // Якщо так, то num не є простим, тому повертаємо false
@@ -61,11 +61,11 @@ console.log("isPrimeNumber(10)", isPrimeNumber(10)); // Виведе: false
 
 function isPositiveNumber(num) {
   if (num > 0) {
-    return `true`; // Перевіряємо, чи число num більше 0
+    return true; // Перевіряємо, чи число num більше 0
     // Якщо так, то num є позитивним, тому повертаємо true
     // В іншому випадку, якщо num менше або дорівнює 0, то num не є позитивним, тому повертаємо false
   } else {
-    return `false`;
+    return false;
   }
 }
 
@@ -78,10 +78,10 @@ console.log("isPositiveNumber(-2)", isPositiveNumber(-2)); // Виведе: fals
 function isEmptyString(str) {
   if (str === "") {
     // Перевіряємо, чи рядок str дорівнює пустому рядку ('')
-    return `true`; // Якщо так, то str є порожнім рядком, тому повертаємо true
+    return true; // Якщо так, то str є порожнім рядком, тому повертаємо true
     // В іншому випадку, якщо str містить хоча б один символ, то str не є порожнім рядком, тому повертаємо false
   } else {
-    return `false`;
+    return false;
   }
 }
 // якщо використовувати length, тоді перед функцієй задаємо let str1 = ""; в умові if пишемо length.str === length.str1
